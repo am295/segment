@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>세그먼트 & 발송유형 제안</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f5f8;
+      padding: 24px;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+      color: #222;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 32px 0 12px;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 24px 0 8px;
+    }
+    p {
+      font-size: 14px;
+      margin: 4px 0 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    th, td {
+      border: 1px solid #e0e0e0;
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    th {
+      background: #fafafa;
+      font-weight: 600;
+      text-align: left;
+    }
+    tr:nth-child(even) td {
+      background: #fcfcff;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #f2f0ff;
+    }
+    .type-M { background: #e3f2fd; }
+    .type-N { background: #e8f5e9; }
+    .type-I { background: #fff3e0; }
+    .type-F { background: #fce4ec; }
+    .sub {
+      font-size: 12px;
+      color: #777;
+    }
+    .highlight {
+      font-weight: 600;
+      color: #4a2cff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>세그먼트 & 발송유형 조합 제안</h1>
+    <p class="sub">
+      회원 속성(회원구분, 날짜, 성별, 등급, 가입경로)과 발송유형(M/N/I/F)을 결합하여
+      업종별로 효율적인 타깃팅이 가능한 구조입니다.
+    </p>
+
+    <h2>1. 주요 세그먼트 × 발송유형 조합</h2>
+    <p class="sub">
+      아래 조합은 실제 마케팅에서 활용 가치가 높은 경우만 정리한 예시입니다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:6%;">No</th>
+          <th style="width:28%;">세그먼트 조건</th>
+          <th style="width:10%;">발송유형</th>
+          <th style="width:26%;">활용 목적</th>
+          <th style="width:30%;">장점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A-1</td>
+          <td>
+            가입일 기준 <br />
+            └ 최근 가입 회원 + SMS 수신동의
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="sub">마수동 유지 - 채널친구 제외</span>
+          </td>
+          <td>신규 전환 / 첫 구매 유도 웰컴 캠페인</td>
+          <td>
+            채널친구를 제외한 <span class="highlight">순수 신규 리치</span> 타깃팅.<br />
+            첫 가입 고객 전환률이 높고, 중복 노출이 없음.
+          </td>
+        </tr>
+        <tr>
+          <td>A-2</td>
+          <td>
+            가입경로 기준<br />
+            └ PC / 모바일 유입 분리
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="sub">마수동 유지 - 채널친구 제외</span>
+          </td>
+          <td>채널별 리타겟팅 (특히 모바일 이탈 방지)</td>
+          <td>
+            이탈률이 높은 <span class="highlight">모바일 유입 고객</span> 위주로 재유입 캠페인 가능.<br />
+            디바이스 특성에 맞는 랜딩/크리에이티브 조합에 적합.
+          </td>
+        </tr>
+        <tr>
+          <td>B-1</td>
+          <td>
+            최근접속일 + 회원등급<br />
+            └ 최근 7~30일 방문 + VIP/골드 등급
+          </td>
+          <td>
+            <span class="tag type-M">M타입</span><br />
+            <span class="sub">마수동 유지 (채널친구 포함)</span>
+          </td>
+          <td>상위 고객 대상 재구매/업셀 캠페인</td>
+          <td>
+            구매 여력이 높은 상위 등급 고객을 폭넓게 커버.<br />
+            즉각적인 매출 반응 기대, 이벤트/한정판 안내에 강점.
+          </td>
+        </tr>
+        <tr>
+          <td>B-2</td>
+          <td>
+            최근접속일 기준<br />
+            └ 최근 7~30일 방문 고객
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="sub">마수동 유지 - 채널친구 제외</span>
+          </td>
+          <td>최근 방문 고객 리타겟팅</td>
+          <td>
+            관심은 있으나 친구가 아닌 고객만 선별 발송.<br />
+            <span class="highlight">중복 없이 효율적인 재방문 유도</span> 가능.
+          </td>
+        </tr>
+        <tr>
+          <td>C-1</td>
+          <td>
+            최근접속일 기준<br />
+            └ 60~180일 미접속(휴면 후보)
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="sub">마수동 유지 - 채널친구 제외</span>
+          </td>
+          <td>휴면/이탈 고객 재활성화</td>
+          <td>
+            실제로 복귀 가능성이 있는 고객군만 타깃.<br />
+            불필요한 광고비를 줄이면서, 리마인드/복귀 프로모션에 적합.
+          </td>
+        </tr>
+        <tr>
+          <td>D-1</td>
+          <td>
+            기념일 데이터<br />
+            └ 생년월일 / 결혼기념일 보유 회원
+          </td>
+          <td>
+            <span class="tag type-M">M타입</span><br />
+            <span class="sub">마수동 유지 (채널친구 포함)</span>
+          </td>
+          <td>생일/기념일 축하 메시지 및 쿠폰 발송</td>
+          <td>
+            전체 동의 고객 기준으로 넓게 도달.<br />
+            브랜드 호감/충성도 향상에 효과적, CSR 이미지에도 기여.
+          </td>
+        </tr>
+        <tr>
+          <td>E-1</td>
+          <td>
+            성별 + 회원등급<br />
+            └ 남/여 + VIP/골드 등급
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="sub">마수동 유지 - 채널친구 제외</span>
+          </td>
+          <td>성별 맞춤 VIP 추천 캠페인</td>
+          <td>
+            성별에 따라 선호 상품이 다른 업종에 적합.<br />
+            <span class="highlight">개인화 추천</span>으로 클릭·구매율 상승.
+          </td>
+        </tr>
+        <tr>
+          <td>E-2</td>
+          <td>
+            성별 + 최근접속일<br />
+            └ 남/여 + 최근 방문
+          </td>
+          <td>
+            <span class="tag type-F">F타입</span><br />
+            <span class="sub">채널친구 (마수동 포함)</span>
+          </td>
+          <td>채널 친구 대상 로열티/이벤트 안내</td>
+          <td>
+            이미 관계가 형성된 친구 기반 타깃팅.<br />
+            단골 관리, 시즌 오픈/라이브 방송 안내에 활용하기 좋음.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. 업종별 추천 세그먼트 조합</h2>
+    <p class="sub">
+      업종 특성에 따라 우선적으로 권장되는 세그먼트 조합입니다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:14%;">업종</th>
+          <th style="width:36%;">추천 세그먼트 조건</th>
+          <th style="width:12%;">발송유형</th>
+          <th style="width:38%;">이유 / 활용 포인트</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>패션 · 의류</td>
+          <td>
+            ① 성별 + 최근접속 7~30일<br />
+            ② 신규 가입 + SMS 수신동의
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span>
+          </td>
+          <td>
+            성별에 따른 취향 차이가 큰 업종.<br />
+            채널친구를 제외한 신규 리치 확보에 최적.<br />
+            신상/기획전, 첫구매 쿠폰 캠페인에 권장.
+          </td>
+        </tr>
+        <tr>
+          <td>뷰티 · 화장품</td>
+          <td>
+            ① 생일/기념일 보유 회원<br />
+            ② 회원등급 + 최근접속
+          </td>
+          <td>
+            <span class="tag type-M">M타입</span><br />
+            <span class="tag type-N">N타입</span>
+          </td>
+          <td>
+            재구매 주기가 뚜렷한 카테고리.<br />
+            기념일 쿠폰, VIP 전용 기획전에 효과적.<br />
+            재구매 리마인드 시 N타입으로 효율 극대화 가능.
+          </td>
+        </tr>
+        <tr>
+          <td>건강식품 · 기능식품</td>
+          <td>
+            ① 가입경로(모바일 중심) + 최근접속<br />
+            ② 섭취주기(예: 30~45일) 기준 리마인드
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span>
+          </td>
+          <td>
+            정기/반복 구매 비중이 높은 업종.<br />
+            섭취주기에 맞춘 리마인드로 전환율 상승.<br />
+            모바일 유입 고객 중심 타겟팅에 유리.
+          </td>
+        </tr>
+        <tr>
+          <td>리빙 · 홈데코</td>
+          <td>
+            ① 성별 + 최근접속<br />
+            ② 회원등급(VIP/패밀리) 고객
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="tag type-M">M타입</span>
+          </td>
+          <td>
+            취향 기반 소비가 큰 카테고리.<br />
+            성별/등급에 따라 기획전·컬렉션 안내에 활용.<br />
+            상위등급 고객 대상 한정 프로모션에 적합.
+          </td>
+        </tr>
+        <tr>
+          <td>식품 · 밀키트</td>
+          <td>
+            ① 모바일 유입 + 최근접속 14일<br />
+            ② 최근 구매 후 일정 기간 경과 고객
+          </td>
+          <td>
+            <span class="tag type-N">N타입</span><br />
+            <span class="tag type-M">M타입</span>
+          </td>
+          <td>
+            구매 회전이 빠른 업종.<br />
+            최근 접점이 있는 고객 위주로 캠페인 시 효율↑.<br />
+            재구매 쿠폰/신메뉴 안내에 활용.
+          </td>
+        </tr>
+        <tr>
+          <td>구독 · 멤버십</td>
+          <td>
+            ① VIP/장기 구독 고객 + 채널친구<br />
+            ② 최근 30일 이상 미접속 구독자
+          </td>
+          <td>
+            <span class="tag type-F">F타입</span><br />
+            <span class="tag type-N">N타입</span>
+          </td>
+          <td>
+            로열티 관리와 이탈 방지가 핵심.<br />
+            F타입으로 단골/핵심 구독자 관리,<br />
+            휴면 구독자는 N타입으로 복귀 캠페인 운영.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. 발송유형(M / N / I / F) 요약</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:10%;">유형</th>
+          <th style="width:30%;">타깃 정의</th>
+          <th style="width:30%;">장점</th>
+          <th style="width:30%;">권장 사용 상황</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag type-M">M타입</span></td>
+          <td>광고주 마수동 유저 (채널친구 포함)</td>
+          <td>
+            도달 범위가 가장 넓음.<br />
+            빠른 매출 반응이 필요한 캠페인에 유리.
+          </td>
+          <td>
+            전체 프로모션, 시즌 오픈, 재고 소진 등<br />
+            넓은 도달이 필요한 경우.
+          </td>
+        </tr>
+        <tr>
+          <td><span class="tag type-N">N타입</span></td>
+          <td>광고주 마수동 유저 - 채널친구 제외</td>
+          <td>
+            채널친구 중복 없이 <span class="highlight">순수 신규 리치</span> 타깃.<br />
+            대부분 업종에서 효율이 가장 좋은 구조.
+          </td>
+          <td>
+            신규 전환 캠페인, 재유입 유도,<br />
+            광고 효율(ROAS)을 중시하는 캠페인에 1순위 권장.
+          </td>
+        </tr>
+        <tr>
+          <td><span class="tag type-I">I타입</span></td>
+          <td>광고주 마수동 유저 ∩ 채널친구 (교집합)</td>
+          <td>
+            매우 코어한 고객만 타깃팅.<br />
+            적은 모수지만 반응률 높은 집단.
+          </td>
+          <td>
+            VIP 한정 이벤트, 프리런칭, 라운지 초대 등<br />
+            ‘가장 중요한 고객’ 대상 캠페인.
+          </td>
+        </tr>
+        <tr>
+          <td><span class="tag type-F">F타입</span></td>
+          <td>채널친구 전체 (마수동 유저 포함)</td>
+          <td>
+            채널 기반 관계가 형성된 고객군.<br />
+            브랜딩/로열티 관리에 적합.
+          </td>
+          <td>
+            채널 운영 중인 브랜드의 정기 소식,<br />
+            라이브, 신제품 소식, 커뮤니티형 운영에 적합.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
